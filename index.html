@@ -42,19 +42,6 @@
         loop="true"
         src="marker1-video.mp4">
       </video>
-	  
-	  <img id="marker2-thumb" src="targets/marker2-target.jpg">
-      <video 
-        id="marker2-video"
-		onloadeddata="this.play();"
-		playsinline
-		controls
-		autoplay="autoplay"
-        muted
-        crossorigin="anonymous"
-        loop="true"
-        src="marker2-video.mp4">
-      </video>
     </a-assets>
 
     <a-camera
@@ -71,11 +58,6 @@
     <a-entity
       xrextras-named-image-target="name: marker1-target"
       xrextras-play-video="video: #marker1-video; thumb: #marker1-thumb; canstop: true"
-      geometry="primitive: plane; height: 0.75; width: 0.79;">
-    </a-entity>
-    <a-entity
-      xrextras-named-image-target="name: marker2-target"
-      xrextras-play-video="video: #marker2-video; thumb: #marker2-thumb; canstop: true"
       geometry="primitive: plane; height: 0.75; width: 0.79;">
     </a-entity>
     <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
