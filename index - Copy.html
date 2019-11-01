@@ -40,6 +40,20 @@
 		</video>
     </a-assets>
 	
+    <a-assets>
+    <a-asset-item id="jelly-glb" src="jellyfish-model.glb"></a-asset-item>
+	</a-asset-item>
+      <img id="marker1-thumb" src="targets/marker1-target.png">
+		<video
+        id="marker1-video"
+        autoplay
+        muted
+        crossorigin="anonymous"
+        loop="true"
+        src="marker1-video.mp4">
+		</video>
+    </a-assets>
+	
     <a-camera
       position="0 4 10"
       raycaster="objects: .cantap"
@@ -56,6 +70,15 @@
       xrextras-play-video="video: #jelly-video; thumb: #jelly-thumb; canstop: true"
       geometry="primitive: plane; height: 1; width: 0.79;">
     </a-entity>
+
+	    <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
+    <a-entity
+      xrextras-named-image-target="name: video-target"
+      xrextras-play-video="video: #marker1-video; thumb: #marker1-thumb; canstop: true"
+      geometry="primitive: plane; height: 1; width: 0.79;">
+    </a-entity>
+	
+	
     <!-- Note: "name:" must be set to the name of the image target uploaded to the 8th Wall Console -->
     <a-entity xrextras-named-image-target="name: model-target">
       <!-- Add a child entity that can be rotated independently of the image target. -->
