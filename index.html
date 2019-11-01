@@ -29,6 +29,16 @@
 
     <a-assets>
 	  <a-asset>
+	  <img id="marker1-thumb" src="targets/marker1-target.jpg">
+      <video
+        id="marker1-video"
+        autoplay
+        muted
+        crossorigin="anonymous"
+        loop="true"
+        src="marker1-video.mp4">
+      </video>
+		</a-asset>
 	  <a-asset>
 	  <img id="marker2-thumb" src="targets/marker2-target.jpg">
       <video
@@ -77,6 +87,12 @@
 
     <a-light type="ambient" intensity="1"></a-light>
 
+	<a-entity
+      xrextras-named-image-target="name: marker1-target"
+      xrextras-play-video="video: #marker1-video; thumb: #marker1-thumb; canstop: true"
+      geometry="primitive: plane; height: 1; width: 1;">
+    </a-entity>
+	
 	<a-entity
       xrextras-named-image-target="name: marker2-target"
       xrextras-play-video="video: #marker2-video; thumb: #marker2-thumb; canstop: true"
