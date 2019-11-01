@@ -29,14 +29,15 @@
 
     <a-assets>
 	  <a-asset>
-      <img id="jelly-thumb" src="targets/video-target.jpg">
+	  <a-asset>
+	  <img id="marker2-thumb" src="targets/marker2-target.jpg">
       <video
-        id="jelly-video"
+        id="marker2-video"
         autoplay
         muted
         crossorigin="anonymous"
         loop="true"
-        src="jellyfish-video.mp4">
+        src="marker2-video.mp4">
       </video>
 		</a-asset>
 	  
@@ -49,6 +50,18 @@
         crossorigin="anonymous"
         loop="true"
         src="marker3-video.mp4">
+      </video>
+		</a-asset>
+		
+			  <a-asset>
+	  <img id="marker4-thumb" src="targets/marker4-target.jpg">
+      <video
+        id="marker4-video"
+        autoplay
+        muted
+        crossorigin="anonymous"
+        loop="true"
+        src="marker4-video.mp4">
       </video>
 		</a-asset>
 	  </a-assets>
@@ -64,19 +77,23 @@
 
     <a-light type="ambient" intensity="1"></a-light>
 
-    <a-entity
-      xrextras-named-image-target="name: video-target"
-      xrextras-play-video="video: #jelly-video; thumb: #jelly-thumb; canstop: true"
-      geometry="primitive: plane; height: 1; width: 0.79;">
+	<a-entity
+      xrextras-named-image-target="name: marker2-target"
+      xrextras-play-video="video: #marker2-video; thumb: #marker2-thumb; canstop: true"
+      geometry="primitive: plane; height: 0.75; width: 0.79;">
     </a-entity>
 
 	<a-entity
       xrextras-named-image-target="name: marker3-target"
       xrextras-play-video="video: #marker3-video; thumb: #marker3-thumb; canstop: true"
-      geometry="primitive: plane; height: 1; width: 0.79;">
+      geometry="primitive: plane; height: 0.75; width: 0.79;">
     </a-entity>
 	
-	
+	<a-entity
+      xrextras-named-image-target="name: marker4-target"
+      xrextras-play-video="video: #marker4-video; thumb: #marker4-thumb; canstop: true"
+      geometry="primitive: plane; height: 0.75; width: 0.79;">
+    </a-entity>
   </a-scene>
 
 </body>
